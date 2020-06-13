@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Game Dev on Ingots of learning</title>
-    <link>https://example.com/categories/game-dev/</link>
+    <link>https://drdjing.github.io/categories/game-dev/</link>
     <description>Recent content in Game Dev on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/categories/game-dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drdjing.github.io/categories/game-dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Starting in Game Development</title>
-      <link>https://example.com/blog/gamedevstart/</link>
+      <link>https://drdjing.github.io/blog/gamedevstart/</link>
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/blog/gamedevstart/</guid>
+      <guid>https://drdjing.github.io/blog/gamedevstart/</guid>
       <description>I&amp;rsquo;m a man of many ideas. Wanting to develop a simple game, then move onto more complex ones, is one of those ideas. Of course, many have done this before me and many will after me, so I have no qualms about standing on the shoulders of giants, and using a game engine that suits my needs.
 Now, onto that. In the game engine world, there are two contenders that everyone knows about (so far as I can tell).</description>
     </item>

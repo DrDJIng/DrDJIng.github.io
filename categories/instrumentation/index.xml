@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Instrumentation on Ingots of learning</title>
-    <link>https://example.com/categories/instrumentation/</link>
+    <link>https://drdjing.github.io/categories/instrumentation/</link>
     <description>Recent content in Instrumentation on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/categories/instrumentation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drdjing.github.io/categories/instrumentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reworking the LabJack interface</title>
-      <link>https://example.com/blog/labjack2/</link>
+      <link>https://drdjing.github.io/blog/labjack2/</link>
       <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/blog/labjack2/</guid>
+      <guid>https://drdjing.github.io/blog/labjack2/</guid>
       <description>To date, I have something that kind of approximates the beginning of the program I want to make. I can set a stream of data to start, but can&amp;rsquo;t stop it. I can live-plot this data, but without much control. I have yet to integrate in signal generation while streaming, which I&amp;rsquo;m pretty sure is possible, but am 100% sure is necessary.
 The biggest thing I&amp;rsquo;ve learned so far is that I need to integrate multi-threading.</description>
     </item>
     
     <item>
       <title>Labjack experiments</title>
-      <link>https://example.com/blog/labjack/</link>
+      <link>https://drdjing.github.io/blog/labjack/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/blog/labjack/</guid>
+      <guid>https://drdjing.github.io/blog/labjack/</guid>
       <description>My current job has me do a lot of random bits and pieces, very little coherent &amp;ldquo;This is your job&amp;rdquo; tasks. To date, I&amp;rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment.</description>
     </item>
     

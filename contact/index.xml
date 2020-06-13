@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contact on Ingots of learning</title>
-    <link>https://example.com/contact/</link>
+    <link>https://drdjing.github.io/contact/</link>
     <description>Recent content in Contact on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="https://example.com/contact/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drdjing.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
