@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julia on Hugo Future Imperfect Slim</title>
+    <link>https://example.com/julia/</link>
+    <description>Recent content in Julia on Hugo Future Imperfect Slim</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://example.com/julia/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://example.com/julia/speedcompare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/julia/speedcompare/</guid>
+      <description>Title: Speed comparison between MATLAB and Julia Author: David Ing Date: 23-04-2020 Category: Science Tags: Julia, Science, MATLAB
+Julia is a language that seems to be, in my opinion, a good point to move on from MATLAB. It promises C++ speed, with the high-level coding practices of MATLAB.
+If you wrap your script in a function, you get your speedup. At least that&amp;rsquo;s my understanding.
+I wanted to test to see if Julia would actually run faster than MATLAB, so I dug deep into my memory core, and retrieved some MATLAB code from my initial days as a young physicist.</description>
+    </item>
+    
+  </channel>
+</rss>

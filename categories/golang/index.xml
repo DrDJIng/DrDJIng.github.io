@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Ingots of learning</title>
+    <link>https://example.com/categories/golang/</link>
+    <description>Recent content in Golang on Ingots of learning</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Static Site Generation with Hugo</title>
+      <link>https://example.com/blog/staticsitegen/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/blog/staticsitegen/</guid>
+      <description>So I had issues with getting Pelican to work on Windows (I game a lot, so Windows is more practical for me than a nix distribution), mostly with theme generation because I really didn&amp;rsquo;t want to have to learn yet another language, just to get a website up and running. I recently learned HTML5 and relatively modern CSS practices, including responsive design, and I didn&amp;rsquo;t particularly feel like branching out again so soon.</description>
+    </item>
+    
+  </channel>
+</rss>
