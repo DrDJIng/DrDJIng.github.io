@@ -21,5 +21,14 @@
 The biggest thing I&amp;rsquo;ve learned so far is that I need to integrate multi-threading.</description>
     </item>
     
+    <item>
+      <title>Labjack experiments</title>
+      <link>https://example.com/blog/labjack/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/blog/labjack/</guid>
+      <description>My current job has me do a lot of random bits and pieces, very little coherent &amp;ldquo;This is your job&amp;rdquo; tasks. To date, I&amp;rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment.</description>
+    </item>
+    
   </channel>
 </rss>
