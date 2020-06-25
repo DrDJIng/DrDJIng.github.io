@@ -11,7 +11,7 @@
 This time, it brought me back with the realisation that because of USB limitations, I cannot multi-thread data from a streaming Labjack and simultaneously command/response a signal output with enough fine time control.">
 <meta itemprop="datePublished" content="2020-06-25T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="233">
+<meta itemprop="wordCount" content="336">
 <meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/LJ.png">
 
 
@@ -289,6 +289,7 @@ This time, it brought me back with the realisation that because of USB limitatio
     <p>This blog post was originally going to be about how great I am at making programs, and how my program was practically finished, etc. Unfortunately, however, real life has a way of bringing you back to reality, often in less than ideal ways.</p>
 <p>This time, it brought me back with the realisation that because of USB limitations, I cannot multi-thread data from a streaming Labjack and simultaneously command/response a signal output with enough fine time control. Due to the way USB queueing works, there&rsquo;s a minimum 400 ms delay between executions from another thread. This by itself wouldn&rsquo;t be too bad, but because of the fact that people wont push buttons precisely on a 400 ms timer, there&rsquo;s an unacceptable amount of randomness being introduced to my signal output.</p>
 <p>To resolve this issue, I have ordered another Labjack (a U3 this time instead of a U6). My plan is to have the U6, with its higher bit AIN ports, handle the data streaming from the force transducer and the sarcomere length calculator. Meanwhile, a U3 will stand by, possibly in a new process, that will handle signal outputs on an entirely different USB port. In this way I hope to avoid this random pitfall I seem to have found myself in.</p>
+<p>I&rsquo;m also taking this opportunity to completely reorganise my file structure. Taking advice from the book &ldquo;Python for the Lab&rdquo; by Aquiles Carattino, I am going to organise my code into several modules, which will be placed within an easy-to-read file structure. Then I will create an init file, calling those modules for the UI, new threads and processes, and all that goodness. In this way, I should be able to make a much more readable, approachable, and hopefully modular code. I only hope that the next poor soul who looks at this program in a decades time will understand what I&rsquo;ve done.</p>
 <p>Until then, I&rsquo;m finishing up other work that needs doing, such as my saromere fracture area code, and various github repository maintenance.</p>
 
   </div>
