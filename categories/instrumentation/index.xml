@@ -6,7 +6,7 @@
     <description>Recent content in Instrumentation on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/instrumentation/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title>Reworking the LabJack interface</title>
       <link>https://drdjing.github.io/blog/labjack2/</link>
-      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://drdjing.github.io/blog/labjack2/</guid>
-      <description>To date, I have something that kind of approximates the beginning of the program I want to make. I can set a stream of data to start, but can&amp;rsquo;t stop it. I can live-plot this data, but without much control. I have yet to integrate in signal generation while streaming, which I&amp;rsquo;m pretty sure is possible, but am 100% sure is necessary.
-The biggest thing I&amp;rsquo;ve learned so far is that I need to integrate multi-threading.</description>
+      <description>This blog post was originally going to be about how great I am at making programs, and how my program was practically finished, etc. Unfortunately, however, real life has a way of bringing you back to reality, often in less than ideal ways.
+This time, it brought me back with the realisation that because of USB limitations, I cannot multi-thread data from a streaming Labjack and simultaneously command/response a signal output with enough fine time control.</description>
     </item>
     
     <item>
