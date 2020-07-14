@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Ingots of learning</title>
+    <link>https://drdjing.github.io/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Ingots of learning</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://drdjing.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning practical machine learning</title>
+      <link>https://drdjing.github.io/blog/mllearning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/mllearning/</guid>
+      <description>I&amp;rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&amp;rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.</description>
+    </item>
+    
+  </channel>
+</rss>

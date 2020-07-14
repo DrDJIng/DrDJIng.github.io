@@ -2,31 +2,25 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Labjack experiments - Ingots of learning</title>
+<title>Learning practical machine learning - Ingots of learning</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Labjack experiments">
-<meta itemprop="description" content="My current job has me do a lot of random bits and pieces, very little coherent &ldquo;This is your job&rdquo; tasks. To date, I&rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment.">
-<meta itemprop="datePublished" content="2020-03-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="299">
-<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/LJ.png">
+<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Learning practical machine learning">
+<meta itemprop="description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.">
+
+<meta itemprop="wordCount" content="690">
 
 
 
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Labjack experiments" />
-<meta property="og:description" content="My current job has me do a lot of random bits and pieces, very little coherent &ldquo;This is your job&rdquo; tasks. To date, I&rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment." />
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Learning practical machine learning" />
+<meta property="og:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://drdjing.github.io/blog/labjack/" />
-<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/LJ.png" />
-<meta property="article:published_time" content="2020-03-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-06T00:00:00+00:00" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/LJ.png"/>
+<meta property="og:url" content="https://drdjing.github.io/blog/mllearning/" />
 
-<meta name="twitter:title" content="Labjack experiments"/>
-<meta name="twitter:description" content="My current job has me do a lot of random bits and pieces, very little coherent &ldquo;This is your job&rdquo; tasks. To date, I&rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning practical machine learning"/>
+<meta name="twitter:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB."/>
 <link rel="stylesheet" href="/css/bundle.min.890f30b8b199a3d390afae9cf9f69d7a932a6a7d91fc3a3b9e5b9d780c334432.css" integrity="sha256-iQ8wuLGZo9OQr66c&#43;fadepMqan2R/Do7nludeAwzRDI="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -108,37 +102,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Labjack%20experiments&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Learning%20practical%20machine%20learning&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" rel="noopener" class="share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn facebook">
         <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;title=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;title=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;description=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by David&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by David%20Ing&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -214,17 +208,17 @@
   <header>
   <div class="title">
     
-      <h2><a href="/blog/labjack/">Labjack experiments</a></h2>
+      <h2><a href="/blog/mllearning/">Learning practical machine learning</a></h2>
     
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-03-06 00:00:00 &#43;0000 UTC">
-      March 6, 2020
+    <time class="published" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+      January 1, 0001
     </time>
-    <span class="author">David</span>
+    <span class="author">David Ing</span>
     
-      <p>2 minute read</p>
+      <p>4 minute read</p>
     
   </div>
 </header>
@@ -237,37 +231,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Labjack%20experiments&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Learning%20practical%20machine%20learning&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" rel="noopener" class="share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn facebook">
         <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;title=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;title=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f&amp;description=Labjack%20experiments" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by David&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2flabjack%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by David%20Ing&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -275,23 +269,20 @@
 
   </section>
   
-  <a href="/blog/labjack/" class="image featured">
-    
-      <img src="https://drdjing.github.io/images/2020/frontimg/LJ.png" alt="">
-    
-  </a>
-
 
   <div class="content">
-    <p>My current job has me do a lot of random bits and pieces, very little coherent &ldquo;This is your job&rdquo; tasks. To date, I&rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment.</p>
-<p>To this end, I researcher a few options, and settled on the LabJack, mostly because it was cheap and I am sure I can write controller code for it. Thankfully, it comes with drivers and a ready-to-use code-base of high level functions in a variety of languages. Since I&rsquo;m trying to get out of my MATLAB rut and because I want someone else to be able to modify the code in the future, I chose to use Python 3.8.</p>
-<p>Since I&rsquo;ve only recently decided to do this blog, I&rsquo;ve actually made a decent bit of progress that, unfortunately, isn&rsquo;t documented in blog form. I&rsquo;m just going to start from where I am, and give a brief rundown of what I did up to this point. Most of these I achieved thanks to the excellent examples packaged with the Python functions by the LabJack team.</p>
-<ul>
-<li>How to set a voltage on the Analog Outputs</li>
-<li>How to stream data from the Labjack at rates up to 50kHz, with variable resolution</li>
-<li>How to plot live-updating graphs</li>
-</ul>
-<p>I still have a long way to go, and less than a month to finish this project. My to-do list includes multi-threading, adding an arbitrary &ldquo;waveform&rdquo; generator option, data output, testing and verification, feedback, all that jazz.  This is going to be a hell of a month!</p>
+    <p>I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.</p>
+<p>However, I have many grand ideas for ML that require a working understanding. To this end, I am going to undertake the free <a href="https://course.fast.ai">Fast AI course</a>, as well as read what appears to be an eminent text book <a href="http://aima.cs.berkeley.edu/">Artificial Intelligence: A Modern Approach</a>. I hope to keep a bit of a guide to my journey here.</p>
+<p>So, this is the first post! Straight away, I know this course means business. Why? It requires GPU usage. It has several recommendations, but I&rsquo;ve chosen to go with Google Colab because it&rsquo;s free. Unfortunately, the entire course is done in Jupyter Notebooks, which I am not a fan of but I understand the necessity when catering to such a large audience. The course promises to allow you to create world-class models for image classification, text interpretation, prediction, and recommendations after just 7 lessons! Providing you put the work in, of course.</p>
+<p>Since the course is available for free, etc, this won&rsquo;t be a blow by blow account of the lesson. I mean, the lessons are there. Instead, it&rsquo;s going to be the ideas that I decide are the most important to me.</p>
+<p>The first lesson is on Image classification, a typical problem in ML. We&rsquo;ve all seen the pictures of people trying out ML, and building a classifier that then classifies their cat as a dog. The lesson is really good, with guidance at all steps, a good forum, and encouragement to not necessarily look too deeply into each step at this stage. The focus is on getting a working model, and deeper understanding comes later in Part 2.</p>
+<p>The basic structure of the program goes something like Get Data → Process Data → Train Model → Results → Fine Tune → Train Model → Results. This seems like a fairly standard workloop.</p>
+<p>An important take away from this lesson was that for GPU&rsquo;s to function at their peak performance, the datasets need to be the same size. In fact, the lecturer described this is a shortcoming in modern deep learning techniques. A possible avenue for research, perhaps? Probably not for me though, since it would most likely pertain more to GPU architecture than ML algorithms.</p>
+<p>He also mentions Transfer Learning, which sounds like a great way to reduce the amount of time spent training your neural net. So for my ideas, perhaps I can cut down on the amount of work I need to do by utilising existing trained sets? Definitely worth looking into.</p>
+<p>Anyway, by the end of this first lesson, he&rsquo;s taken us through the code necessary to train a model to identify breeds of cats and dogs. FastAI is an incredibly powerful piece of technology, given that it accomplishes this in around 5 lines of code.</p>
+<p>Now for the exercise: building our own image classification project. So first I need to decide what to classify. I&rsquo;m thinking if this neural net can classify images of cats and dogs so well that it can actually determine the breed correctly 96% of the time, then it should be able to classify me some clouds.</p>
+<p>Actually my wife came to me and suggested I do one to classify the different kinds of bees, or maybe wasps, so that&rsquo;s a great idea as well. I can also package these up into a simple phone app, so that would be cool.</p>
+<p>Since I have two different topics I want to explore, I&rsquo;ll create separate blog posts for each of them, and come back some time in the future to link them in here.</p>
 
   </div>
   <footer>
@@ -303,13 +294,13 @@
         <ul>
           
             
-            <li><a class="article-category-link" href="https://drdjing.github.io/categories/labjack">LabJack</a></li>
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/machine-learning">Machine Learning</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/ai">AI</a></li>
           
             
             <li><a class="article-category-link" href="https://drdjing.github.io/categories/python">Python</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://drdjing.github.io/categories/instrumentation">Instrumentation</a></li>
           
         </ul>
       </li>
@@ -338,7 +329,7 @@
       </h5>
 
       
-      <input type="hidden" name="options[entryId]" value="7af22ef64afdceed47a92427d148c7c3">
+      <input type="hidden" name="options[entryId]" value="5ad6f496757a35aed6b1f1c720b0550e">
       <input type='hidden' name='fields[replyThread]' value=''>
       <input type='hidden' name='fields[replyID]' value=''>
       <input type='hidden' name='fields[replyName]' value=''>
@@ -381,10 +372,8 @@
 
 <div class="pagination">
   
-    <a href="/blog/mllearning/" class="button"><div class="previous"><div>Learning practical machine learning</div></div></a>
   
-  
-    <a href="/blog/staticsitegen/" class="button"><div class="next"><div>Static Site Generation with Hugo</div></div></a>
+    <a href="/blog/labjack/" class="button"><div class="next"><div>Labjack experiments</div></div></a>
   
 </div>
 
