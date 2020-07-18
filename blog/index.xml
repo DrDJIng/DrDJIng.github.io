@@ -53,6 +53,16 @@ If you wrap your script in a function, you get your speedup.</description>
     </item>
     
     <item>
+      <title>Is it a wasp or a bee?</title>
+      <link>https://drdjing.github.io/blog/mllearning/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/mllearning/</guid>
+      <description>In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&amp;rsquo;. Now that I&amp;rsquo;ve worked on it for a bit, I&amp;rsquo;m ready to show some of my progress, and I&amp;rsquo;ll start with my Bee classification net.
+This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later.</description>
+    </item>
+    
+    <item>
       <title>Static Site Generation with Hugo</title>
       <link>https://drdjing.github.io/blog/staticsitegen/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
@@ -68,16 +78,6 @@ If you wrap your script in a function, you get your speedup.</description>
       
       <guid>https://drdjing.github.io/blog/labjack/</guid>
       <description>My current job has me do a lot of random bits and pieces, very little coherent &amp;ldquo;This is your job&amp;rdquo; tasks. To date, I&amp;rsquo;ve created a website [LINK], studied Machine Learning, decided it was overkill for the image recognition program I then created, and helped to write a paper or two. Now, however, I am stepping well outside of my comfort area and attempting to modernize the interface between a computer and a two-decade old piece of lab equipment.</description>
-    </item>
-    
-    <item>
-      <title>Is it a wasp or a bee?</title>
-      <link>https://drdjing.github.io/blog/mllearning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drdjing.github.io/blog/mllearning/</guid>
-      <description>In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&amp;rsquo;. Now that I&amp;rsquo;ve worked on it for a bit, I&amp;rsquo;m ready to show some of my progress, and I&amp;rsquo;ll start with my Bee classification net.
-This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later.</description>
     </item>
     
   </channel>
