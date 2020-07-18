@@ -6,10 +6,29 @@
     <description>Recent content in Python on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Is it a wasp or a bee?</title>
+      <link>https://drdjing.github.io/blog/beeorwasp/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/beeorwasp/</guid>
+      <description>Rcently, I&amp;rsquo;ve been learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&amp;rsquo;. Now that I&amp;rsquo;ve worked on it for a bit, I&amp;rsquo;m ready to show some of my progress, and I&amp;rsquo;ll start with my Bee classification net.
+This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later.</description>
+    </item>
+    
+    <item>
+      <title>Learning practical machine learning</title>
+      <link>https://drdjing.github.io/blog/mllearning/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/mllearning/</guid>
+      <description>I&amp;rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera (LINK). However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&amp;rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.</description>
+    </item>
     
     <item>
       <title>Labjack take 3</title>
@@ -29,16 +48,6 @@ So this delivery of hardware should solve the two big problems that I was having
       <guid>https://drdjing.github.io/blog/labjack2/</guid>
       <description>This blog post was originally going to be about how great I am at making programs, and how my program was practically finished, etc. Unfortunately, however, real life has a way of bringing you back to reality, often in less than ideal ways.
 This time, it brought me back with the realisation that because of USB limitations, I cannot multi-thread data from a streaming Labjack and simultaneously command/response a signal output with enough fine time control.</description>
-    </item>
-    
-    <item>
-      <title>Is it a wasp or a bee?</title>
-      <link>https://drdjing.github.io/blog/mllearning/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://drdjing.github.io/blog/mllearning/</guid>
-      <description>In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&amp;rsquo;. Now that I&amp;rsquo;ve worked on it for a bit, I&amp;rsquo;m ready to show some of my progress, and I&amp;rsquo;ll start with my Bee classification net.
-This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later.</description>
     </item>
     
     <item>
