@@ -2,25 +2,32 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Learning practical machine learning - Ingots of learning</title>
+<title>Is it a wasp or a bee? - Ingots of learning</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Learning practical machine learning">
-<meta itemprop="description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.">
+<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Is it a wasp or a bee?">
+<meta itemprop="description" content="In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&rsquo;. Now that I&rsquo;ve worked on it for a bit, I&rsquo;m ready to show some of my progress, and I&rsquo;ll start with my Bee classification net.
+This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later.">
 
-<meta itemprop="wordCount" content="690">
+<meta itemprop="wordCount" content="758">
+<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/macinelearning.png">
 
 
 
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Learning practical machine learning" />
-<meta property="og:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB." />
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Is it a wasp or a bee?" />
+<meta property="og:description" content="In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&rsquo;. Now that I&rsquo;ve worked on it for a bit, I&rsquo;m ready to show some of my progress, and I&rsquo;ll start with my Bee classification net.
+This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://drdjing.github.io/blog/mllearning/" />
+<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/macinelearning.png" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Learning practical machine learning"/>
-<meta name="twitter:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB."/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/macinelearning.png"/>
+
+<meta name="twitter:title" content="Is it a wasp or a bee?"/>
+<meta name="twitter:description" content="In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&rsquo;. Now that I&rsquo;ve worked on it for a bit, I&rsquo;m ready to show some of my progress, and I&rsquo;ll start with my Bee classification net.
+This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later."/>
 <link rel="stylesheet" href="/css/bundle.min.890f30b8b199a3d390afae9cf9f69d7a932a6a7d91fc3a3b9e5b9d780c334432.css" integrity="sha256-iQ8wuLGZo9OQr66c&#43;fadepMqan2R/Do7nludeAwzRDI="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -102,7 +109,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Learning%20practical%20machine%20learning&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Is%20it%20a%20wasp%20or%20a%20bee%3f&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
@@ -114,19 +121,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
@@ -208,7 +215,7 @@
   <header>
   <div class="title">
     
-      <h2><a href="/blog/mllearning/">Learning practical machine learning</a></h2>
+      <h2><a href="/blog/mllearning/">Is it a wasp or a bee?</a></h2>
     
     
   </div>
@@ -231,7 +238,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Learning%20practical%20machine%20learning&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Is%20it%20a%20wasp%20or%20a%20bee%3f&amp;url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
@@ -243,19 +250,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;description=Is%20it%20a%20wasp%20or%20a%20bee%3f" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
@@ -269,20 +276,79 @@
 
   </section>
   
+  <a href="/blog/mllearning/" class="image featured">
+    
+      <img src="https://drdjing.github.io/images/2020/frontimg/macinelearning.png" alt="">
+    
+  </a>
+
 
   <div class="content">
-    <p>I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera. However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.</p>
-<p>However, I have many grand ideas for ML that require a working understanding. To this end, I am going to undertake the free <a href="https://course.fast.ai">Fast AI course</a>, as well as read what appears to be an eminent text book <a href="http://aima.cs.berkeley.edu/">Artificial Intelligence: A Modern Approach</a>. I hope to keep a bit of a guide to my journey here.</p>
-<p>So, this is the first post! Straight away, I know this course means business. Why? It requires GPU usage. It has several recommendations, but I&rsquo;ve chosen to go with Google Colab because it&rsquo;s free. Unfortunately, the entire course is done in Jupyter Notebooks, which I am not a fan of but I understand the necessity when catering to such a large audience. The course promises to allow you to create world-class models for image classification, text interpretation, prediction, and recommendations after just 7 lessons! Providing you put the work in, of course.</p>
-<p>Since the course is available for free, etc, this won&rsquo;t be a blow by blow account of the lesson. I mean, the lessons are there. Instead, it&rsquo;s going to be the ideas that I decide are the most important to me.</p>
-<p>The first lesson is on Image classification, a typical problem in ML. We&rsquo;ve all seen the pictures of people trying out ML, and building a classifier that then classifies their cat as a dog. The lesson is really good, with guidance at all steps, a good forum, and encouragement to not necessarily look too deeply into each step at this stage. The focus is on getting a working model, and deeper understanding comes later in Part 2.</p>
-<p>The basic structure of the program goes something like Get Data → Process Data → Train Model → Results → Fine Tune → Train Model → Results. This seems like a fairly standard workloop.</p>
-<p>An important take away from this lesson was that for GPU&rsquo;s to function at their peak performance, the datasets need to be the same size. In fact, the lecturer described this is a shortcoming in modern deep learning techniques. A possible avenue for research, perhaps? Probably not for me though, since it would most likely pertain more to GPU architecture than ML algorithms.</p>
-<p>He also mentions Transfer Learning, which sounds like a great way to reduce the amount of time spent training your neural net. So for my ideas, perhaps I can cut down on the amount of work I need to do by utilising existing trained sets? Definitely worth looking into.</p>
-<p>Anyway, by the end of this first lesson, he&rsquo;s taken us through the code necessary to train a model to identify breeds of cats and dogs. FastAI is an incredibly powerful piece of technology, given that it accomplishes this in around 5 lines of code.</p>
-<p>Now for the exercise: building our own image classification project. So first I need to decide what to classify. I&rsquo;m thinking if this neural net can classify images of cats and dogs so well that it can actually determine the breed correctly 96% of the time, then it should be able to classify me some clouds.</p>
-<p>Actually my wife came to me and suggested I do one to classify the different kinds of bees, or maybe wasps, so that&rsquo;s a great idea as well. I can also package these up into a simple phone app, so that would be cool.</p>
-<p>Since I have two different topics I want to explore, I&rsquo;ll create separate blog posts for each of them, and come back some time in the future to link them in here.</p>
+    <p>In a previous post, I mentioned how I was learning fastai methodology to create image recognition nets, with the ultimate goal of determining cloud types, and bee genus&rsquo;. Now that I&rsquo;ve worked on it for a bit, I&rsquo;m ready to show some of my progress, and I&rsquo;ll start with my Bee classification net.</p>
+<p>This post is about my bee net. Initially, the idea was to classify bees according to their genus, and this is still on the books for later. The issue is getting a large enough dataset that is classified by domain experts. This gets more difficult the more specific you want to be. So finding a large enough number of images of specific bee types proved to be beyond my abilities right now (in fact, that&rsquo;s the next lesson at fast.ai). So instead, I went with a net to tell me if something is a bee, or a wasp.</p>
+<p><img src="/img/2020/other/dkcimgs/Zinger-DKC2.jpg" alt="Is it a bee, or a wasp? I think wasp, but I need an impartial judge to make sure."></p>
+<p>Now, there is a bit of an ulterior motive here, these bad boys from Donkey Kong Country known as Zingers. Now, I&rsquo;ve always called them bees, but I&rsquo;m pretty sure they&rsquo;re actually based on wasps, given their general spikiness and grumpy nature. However, I thought to myself that I could just build an impartial judge, one that could forever settle the internal question of whether these are bees or wasps.</p>
+<p><img src="/img/2020/other/dkcimgs/HornetHole.png" alt="A typical hive level from DKC2."></p>
+<p>Now I know, I know, it&rsquo;s totally a wasp. BUT the levels in Donkey Kong Country 2 that heavily feature these insects take place in <em>hives</em>, fully of honey and hexagonal-shaped cells. Now, while there are a very few species of wasp that produce honey, such as the Mexican Honey Wasp, none use the typical yellow wax that bees do to construct their hives. Instead, wasps use a paper-like substance. So, really, it&rsquo;s still anybody&rsquo;s guess.</p>
+<p>So, I am using fastai, which is ridiculously simple. You essentially load it up, create a dataset with its built in dataset creator, and tell it to make a learning model. Crazy simple, and super few lines of code. For example, this is my entire code base for scraping images from google, preparing the data, training the net, and making the comparison.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> fastai.vision <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> warnings
+warnings<span style="color:#f92672">.</span>filterwarnings(<span style="color:#e6db74">&#39;ignore&#39;</span>) <span style="color:#75715e"># Ignores a warning that something in pytorch is going to change at some point.</span>
+
+classes <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;bee&#39;</span>, <span style="color:#e6db74">&#39;wasp&#39;</span>] <span style="color:#75715e"># Set classes</span>
+path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#39;images/&#39;</span>)
+
+<span style="color:#75715e"># This will scrape google images for pictures, and sort them by type into folders based on the class.</span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> classes:
+   folder <span style="color:#f92672">=</span> name
+   file <span style="color:#f92672">=</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.csv&#39;</span>
+   dest <span style="color:#f92672">=</span> path<span style="color:#f92672">/</span>folder
+   dest<span style="color:#f92672">.</span>mkdir(parents <span style="color:#f92672">=</span> True, exist_ok <span style="color:#f92672">=</span> True)
+   download_images(path<span style="color:#f92672">/</span>file, dest, max_pics <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>)
+
+<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> classes:
+    <span style="color:#66d9ef">print</span>(c)
+    verify_images(path<span style="color:#f92672">/</span>c, delete <span style="color:#f92672">=</span> True, max_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>) <span style="color:#75715e"># Verifies the image can be opened.</span>
+
+<span style="color:#75715e"># Transform images a bit to make the training set better.</span>
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed()
+data <span style="color:#f92672">=</span> ImageDataBunch<span style="color:#f92672">.</span>from_folder(path, train <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.&#34;</span>, valid_pct <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>, ds_tfms <span style="color:#f92672">=</span> get_transforms(), size <span style="color:#f92672">=</span> <span style="color:#ae81ff">224</span>, num_workers <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>)<span style="color:#f92672">.</span>normalize(imagenet_stats)
+
+<span style="color:#75715e"># Show some of the dataset</span>
+data<span style="color:#f92672">.</span>classes
+data<span style="color:#f92672">.</span>show_batch(rows <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, figsize <span style="color:#f92672">=</span> (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>))
+data<span style="color:#f92672">.</span>classes, data<span style="color:#f92672">.</span>c, len(data<span style="color:#f92672">.</span>train_ds), len(data<span style="color:#f92672">.</span>valid_ds)
+
+<span style="color:#75715e"># Run the learning algorithm for the convolutional neural network, here using 34 hidden layers. This was limited by my GPU (GTX 1060 6GB)</span>
+learn <span style="color:#f92672">=</span> cnn_learner(data, models<span style="color:#f92672">.</span>resnet34, metrics <span style="color:#f92672">=</span> error_rate)
+learn<span style="color:#f92672">.</span>fit_one_cycle(<span style="color:#ae81ff">10</span>)
+learn<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;stage-1&#39;</span>)
+learn<span style="color:#f92672">.</span>unfreeze()
+learn<span style="color:#f92672">.</span>lr_find()
+learn<span style="color:#f92672">.</span>recorder<span style="color:#f92672">.</span>plot()
+
+<span style="color:#75715e"># See if we can squeeze a bit more accuracy out of it by setting a range for the learning rate.</span>
+learn<span style="color:#f92672">.</span>fit_one_cycle(<span style="color:#ae81ff">10</span>, max_lr <span style="color:#f92672">=</span> slice(<span style="color:#ae81ff">1e-6</span>, <span style="color:#ae81ff">2e-3</span>))
+learn<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;stage-2&#39;</span>)
+
+learn<span style="color:#f92672">.</span>load(<span style="color:#e6db74">&#39;stage-2&#39;</span>)
+interp <span style="color:#f92672">=</span> ClassificationInterpretation<span style="color:#f92672">.</span>from_learner(learn)
+<span style="color:#75715e"># Show a confusion matrix</span>
+interp<span style="color:#f92672">.</span>plot_confusion_matrix()
+
+learn<span style="color:#f92672">.</span>export()
+defaults<span style="color:#f92672">.</span>device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#39;cpu&#39;</span>)
+
+img <span style="color:#f92672">=</span> open_image(<span style="color:#e6db74">&#39;test/Zinger-DKC2.jpg&#39;</span>)
+learn <span style="color:#f92672">=</span> load_learner(<span style="color:#e6db74">&#39;images/&#39;</span>)
+pred_class, pred_idx,outputs <span style="color:#f92672">=</span> learn<span style="color:#f92672">.</span>predict(img)
+pred_class<span style="color:#f92672">.</span>obj
+</code></pre></div><p>This is all a bit more verbose than it strictly needs to be. There are a number of image transforms and bits and pieces I do that should help prevent overfitting, an example of which can be seen below. I have to admit, I did do a manual pass of the images to delete ones that didn&rsquo;t fit, such as badly drawn cartoons, and in the case of the wasp class, a lot of images of battleships and an elderly lady. I also try to optimise my learning rate a bit, and bring up a number of quantification checks, like the confusion matrix. All in all, I ended up with a model that has a 92% accuracy rate, which most likely could be improved. However, for random images scraped from Google I feel this is an excellent first run!</p>
+<p><img src="/img/2020/science/data_sample.png" alt="A subset of the images scraped from Google."></p>
+<p>And the result from all this?</p>
+<p>Zingers are wasps. What a shock!</p>
+<p>The code for this project can be found on my <a href="https://github.com/DrDJIng/BeeOrWasp">Github page</a>.</p>
 
   </div>
   <footer>
@@ -459,7 +525,7 @@
           
   <a href="/blog/staticsitegen/" class="image featured">
     
-      <img src="https://drdjing.github.io/images/2020/science/JULIATimeEvolve.png" alt="">
+      <img src="https://drdjing.github.io/images/2020/frontimg/HUGO.png" alt="">
     
   </a>
 
