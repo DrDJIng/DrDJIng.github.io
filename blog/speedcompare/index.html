@@ -245,9 +245,9 @@ If you wrap your script in a function, you get your speedup."/>
 <p>I wanted to test to see if Julia would actually run faster than MATLAB, so I dug deep into my memory core, and retrieved some MATLAB code from my initial days as a young physicist. Then I cringed and rewrote the entire thing.</p>
 <p>I&rsquo;ve decided to do my test on the simulation of two interacting qubits, with some simple Lindblad-type dephasing. The Hamiltonian I&rsquo;ve chosen for this system is given by</p>
 <p>$$H=\omega_z \sum_i \sigma_i^z + g \left(\sigma^x_1 \otimes \sigma^x_2 + \sigma^y_1 \otimes \sigma^y_2 \right), $$</p>
-<p>where $\omega_z$ is the energy of the qubits, and $\sigma_i^z$ is the Pauli-Z matrix of the $i$th qubit. It evolves with a Lindblad-style dissipation in the Schrödinger picture according to the time-dependent Lindblad master equation</p>
+<p>where $$\omega_z$$ is the energy of the qubits, and $$\sigma_i^z$$ is the Pauli-Z matrix of the $$i$$th qubit. It evolves with a Lindblad-style dissipation in the Schrödinger picture according to the time-dependent Lindblad master equation</p>
 <p>$$\frac{d\rho}{dt} = \frac{1}{i \hbar}\left[H, \rho\right] + \Gamma \left(L \rho L^{\dagger} - \frac{1}{2}\left[L^{\dagger}L, \rho\right] \right),$$</p>
-<p>where $\Gamma$ is the dephasing rate, and $L$ is the Lindblad dephasing operator, here chosen to act only on qubit 1 ($\sigma_1^z$). The code for this in MATLAB looks something like</p>
+<p>where $$\Gamma$$ is the dephasing rate, and $$L$$ is the Lindblad dephasing operator, here chosen to act only on qubit 1 ($$\sigma_1^z$$). The code for this in MATLAB looks something like</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Matlab" data-lang="Matlab"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">runner</span>
   sX = [<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>; <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span>];
   sY = [<span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>i; <span style="color:#ae81ff">1</span>i <span style="color:#ae81ff">0</span>];
@@ -282,7 +282,7 @@ If you wrap your script in a function, you get your speedup."/>
   f = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>i <span style="color:#f92672">.*</span> (H <span style="color:#f92672">*</span> rho <span style="color:#f92672">-</span> rho <span style="color:#f92672">*</span> H) <span style="color:#f92672">+</span> relRate <span style="color:#f92672">.*</span> (L <span style="color:#f92672">*</span> rho <span style="color:#f92672">*</span> (L<span style="color:#f92672">&#39;</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">.*</span> ((L<span style="color:#f92672">&#39;</span>)<span style="color:#f92672">*</span>L<span style="color:#f92672">*</span>rho <span style="color:#f92672">+</span> rho<span style="color:#f92672">*</span>(L<span style="color:#f92672">&#39;</span>)<span style="color:#f92672">*</span>L));
   f = reshape(f, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">1</span>);
 <span style="color:#66d9ef">end</span>
-</code></pre></div><p>where I&rsquo;ve enclosed the script in a function to equilibrate between MATLAB and Julia as much as possible. Also, it allows me to have the function in the same .m file. After running and timing this, the expectation value of $\sigma_i^z$ looks like:</p>
+</code></pre></div><p>where I&rsquo;ve enclosed the script in a function to equilibrate between MATLAB and Julia as much as possible. Also, it allows me to have the function in the same .m file. After running and timing this, the expectation value of $$\sigma_i^z$$ looks like:</p>
 <p><img src="/images/2020/science/MATLABTimeEvolve.png" alt="Time evolution in MATLAB"></p>
 <p>and took 0.279604 seconds. So, let&rsquo;s see how Julia compares!</p>
 <p>Simulating the exact same setup, the Julia code follows:</p>
