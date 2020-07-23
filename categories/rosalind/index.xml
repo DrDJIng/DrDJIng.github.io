@@ -6,31 +6,31 @@
     <description>Recent content in Rosalind on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 13:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/rosalind/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bioinformatics with Rosalind - DNA</title>
-      <link>https://drdjing.github.io/blog/dna/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://drdjing.github.io/blog/dna/</guid>
-      <description>There&amp;rsquo;s an offshoot of data science called Bioinformatics, and it&amp;rsquo;s essentially the study of how to extract meaningful information out of genetic information. Now, this sounds super cool, so I&amp;rsquo;ve decided to learn a bit about it. To help me with this, I&amp;rsquo;ll be doing the Rosalind problems, and posting my solution here.
-The first problem is to do with DNA, and it&amp;rsquo;s a relatively simple one. All DNA (that I know of) is made up of four nucleotides attached in sequence, along with some deoxyribose sugars and some phosphate groups.</description>
-    </item>
-    
-    <item>
-      <title>Bioinformatics with Rosalind - DNA</title>
+      <title>Bioinformatics with Rosalind - RNA</title>
       <link>https://drdjing.github.io/blog/rna/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jul 2020 13:00:00 +0000</pubDate>
       
       <guid>https://drdjing.github.io/blog/rna/</guid>
       <description>This Rosalind problem deals with RNA. RNA differs slightly from DNA, in that the ribose is oxy&amp;rsquo;d instead of deoxy&amp;rsquo;d, and instead of (T)hymine is has (U)racil. The problem itself is pretty simple:
 Given: A DNA string t having length at most 1000 nt.
 Return: The transcribed RNA string of t.
 My answer is as follows. Note this time I load in the string from a text object instead of copying it into the program itself, and output the answer into a text file as well.</description>
+    </item>
+    
+    <item>
+      <title>Bioinformatics with Rosalind - DNA</title>
+      <link>https://drdjing.github.io/blog/dna/</link>
+      <pubDate>Thu, 23 Jul 2020 12:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/dna/</guid>
+      <description>There&amp;rsquo;s an offshoot of data science called Bioinformatics, and it&amp;rsquo;s essentially the study of how to extract meaningful information out of genetic information. Now, this sounds super cool, so I&amp;rsquo;ve decided to learn a bit about it. To help me with this, I&amp;rsquo;ll be doing the Rosalind problems, and posting my solution here.
+The first problem is to do with DNA, and it&amp;rsquo;s a relatively simple one. All DNA (that I know of) is made up of four nucleotides attached in sequence, along with some deoxyribose sugars and some phosphate groups.</description>
     </item>
     
   </channel>
