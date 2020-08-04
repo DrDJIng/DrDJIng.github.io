@@ -5,8 +5,7 @@
     <link>https://drdjing.github.io/categories/</link>
     <description>Recent content in Categories on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2020 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 01:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +13,7 @@
     <item>
       <title>Bioinformatics</title>
       <link>https://drdjing.github.io/categories/bioinformatics/</link>
-      <pubDate>Thu, 23 Jul 2020 13:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Aug 2020 01:00:00 +0000</pubDate>
       
       <guid>https://drdjing.github.io/categories/bioinformatics/</guid>
       <description></description>
@@ -23,7 +22,7 @@
     <item>
       <title>Python</title>
       <link>https://drdjing.github.io/categories/python/</link>
-      <pubDate>Thu, 23 Jul 2020 13:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Aug 2020 01:00:00 +0000</pubDate>
       
       <guid>https://drdjing.github.io/categories/python/</guid>
       <description></description>
@@ -32,7 +31,7 @@
     <item>
       <title>Rosalind</title>
       <link>https://drdjing.github.io/categories/rosalind/</link>
-      <pubDate>Thu, 23 Jul 2020 13:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Aug 2020 01:00:00 +0000</pubDate>
       
       <guid>https://drdjing.github.io/categories/rosalind/</guid>
       <description></description>

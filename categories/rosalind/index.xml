@@ -5,11 +5,30 @@
     <link>https://drdjing.github.io/categories/rosalind/</link>
     <description>Recent content in Rosalind on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2020 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 01:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/rosalind/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bioinformatics with Rosalind - REVC</title>
+      <link>https://drdjing.github.io/blog/revc/</link>
+      <pubDate>Tue, 04 Aug 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/revc/</guid>
+      <description>This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement.</description>
+    </item>
+    
+    <item>
+      <title>Bioinformatics with Rosalind - FIB</title>
+      <link>https://drdjing.github.io/blog/fib/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/fib/</guid>
+      <description>This Rosalind problem deals with a classic: The Fibonacci Sequence! It&amp;rsquo;s a recursive function that takes the two previous solutions to the function and adds them together. For this problem, it&amp;rsquo;s a touch more complex. Given a number of generations, n, and a number of offspring, k:
+Given: Positive integers $n /lt 40$ and $k /gt 5$.
+Return: The total number of rabbit pairs that will be present after n months, if we begin with 1 pair and in each generation, every pair of reproduction-age rabbits produces a litter of k rabbit pairs (instead of only 1 pair).</description>
+    </item>
     
     <item>
       <title>Bioinformatics with Rosalind - RNA</title>

@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Learning practical machine learning - Ingots of learning</title>
+<title>Bioinformatics with Rosalind - REVC - Ingots of learning</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Learning practical machine learning">
-<meta itemprop="description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera (LINK). However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.">
-<meta itemprop="datePublished" content="2020-07-10T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-07-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="615">
-<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/machinelearning.jpg">
+<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Bioinformatics with Rosalind - REVC">
+<meta itemprop="description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement.">
+<meta itemprop="datePublished" content="2020-08-04T01:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-08-04T01:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="157">
+<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png">
 
 
 
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Learning practical machine learning" />
-<meta property="og:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera (LINK). However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB." />
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Bioinformatics with Rosalind - REVC" />
+<meta property="og:description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://drdjing.github.io/blog/mllearning/" />
-<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/machinelearning.jpg" />
-<meta property="article:published_time" content="2020-07-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-10T00:00:00+00:00" />
+<meta property="og:url" content="https://drdjing.github.io/blog/revc/" />
+<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" />
+<meta property="article:published_time" content="2020-08-04T01:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-04T01:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/machinelearning.jpg"/>
+<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png"/>
 
-<meta name="twitter:title" content="Learning practical machine learning"/>
-<meta name="twitter:description" content="I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera (LINK). However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB."/>
+<meta name="twitter:title" content="Bioinformatics with Rosalind - REVC"/>
+<meta name="twitter:description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement."/>
 <link rel="stylesheet" href="/css/bundle.min.890f30b8b199a3d390afae9cf9f69d7a932a6a7d91fc3a3b9e5b9d780c334432.css" integrity="sha256-iQ8wuLGZo9OQr66c&#43;fadepMqan2R/Do7nludeAwzRDI="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
@@ -107,13 +107,13 @@
 
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2frevc%2f&amp;title=Bioinformatics%20with%20Rosalind%20-%20REVC" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2frevc%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -189,17 +189,17 @@
   <header>
   <div class="title">
     
-      <h2><a href="/blog/mllearning/">Learning practical machine learning</a></h2>
+      <h2><a href="/blog/revc/">Bioinformatics with Rosalind - REVC</a></h2>
     
     
   </div>
   <div class="meta">
-    <time class="published" datetime="2020-07-10 00:00:00 &#43;0000 UTC">
-      July 10, 2020
+    <time class="published" datetime="2020-08-04 01:00:00 &#43;0000 UTC">
+      August 4, 2020
     </time>
     <span class="author"></span>
     
-      <p>3 minute read</p>
+      <p>1 minute read</p>
     
   </div>
 </header>
@@ -211,13 +211,13 @@
 
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f&amp;title=Learning%20practical%20machine%20learning" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2frevc%2f&amp;title=Bioinformatics%20with%20Rosalind%20-%20REVC" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fmllearning%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2frevc%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -225,24 +225,23 @@
 
   </section>
   
-  <a href="/blog/mllearning/" class="image featured">
+  <a href="/blog/revc/" class="image featured">
     
-      <img src="https://drdjing.github.io/images/2020/frontimg/machinelearning.jpg" alt="">
+      <img src="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" alt="">
     
   </a>
 
 
   <div class="content">
-    <p>I&rsquo;ve dabbled a bit in machine learning (ML) before, having taking the introductory course by the famous Andrew Ng on Coursera (LINK). However, upon digging a bit deeper, MATLAB is somewhat outdated to use as a basis for ML tasks these days. Additionally, while the course provided a solid foundation for understanding different types of ML learning algorithms, from a more practical point of view it wasn&rsquo;t as useful. Mostly because the majority of the assignments were mostly pre-filled, leaving the student to create one or two functions that were essentially copy-pasting a piece of math from the lecture slides into MATLAB.</p>
-<p>However, I have many grand ideas for ML that require a working understanding. To this end, I am going to undertake the free Fast AI course (LINK), as well as read what appears to be an eminent text book A Modern Approach (LINK). I hope to keep a bit of a guide to my journey here.</p>
-<p>So, this is the first post! Straight away, I know this course means business. Why? It requires GPU usage. It has several recommendations, but I&rsquo;ve chosen to go with Google Colab because it&rsquo;s free. Unfortunately, the entire course is done in Jupyter Notebooks, which I am not a fan of but I understand the necessity when catering to such a large audience. The course promises to allow you to create world-class models for image classification, text interpretation, prediction, and recommendations after just 7 lessons! Providing you put the work in, of course.</p>
-<p>Since the course is available for free, etc, this won&rsquo;t be a blow by blow account of the lesson. I mean, the lessons are there. Instead, it&rsquo;s going to be the ideas that I decide are the most important to me.</p>
-<p>The first lesson is on Image classification, a typical problem in ML. We&rsquo;ve all seen the pictures of people trying out ML, and building a classifier that then classifies their cat as a dog. The lesson is really good, with guidance at all steps, a good forum, and encouragement to not necessarily look too deeply into each step at this stage. The focus is on getting a working model, and deeper understanding comes later in Part 2.</p>
-<p>The basic structure of the program goes something like Get Data → Process Data → Train Model → Results → Fine Tune → Train Model → Results. This seems like a fairly standard workloop.</p>
-<p>An important take away from this lesson was that for GPU&rsquo;s to function at their peak performance, the datasets need to be the same size. In fact, the lecturer described this is a shortcoming in modern deep learning techniques. A possible avenue for research, perhaps? Probably not for me though, since it would most likely pertain more to GPU architecture than ML algorithms.</p>
-<p>He also mentions Transfer Learning, which sounds like a great way to reduce the amount of time spent training your neural net. So for my ideas, perhaps I can cut down on the amount of work I need to do by utilising existing trained sets? Definitely worth looking into.</p>
-<p>Anyway, by the end of this first lesson, he&rsquo;s taken us through the code necessary to train a model to identify breeds of cats and dogs. FastAI is an incredibly powerful piece of technology, given that it accomplishes this in around 5 lines of code.</p>
-<p>Now for the exercise: building our own image classification project. So first I need to decide what to classify. I&rsquo;m thinking if this neural net can classify images of cats and dogs so well that it can actually determine the breed correctly 96% of the time, then it should be able to classify me some clouds.</p>
+    <p>This <a href="http://rosalind.info">Rosalind</a> problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement. Simply:</p>
+<p>Given: A DNA string $s$ of length at most 1000 base pairs (bp).</p>
+<p>Return: The reverse complement $s^c$ of $s$.</p>
+<p>My answer is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">orig <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;rosalind_revc.txt&#39;</span>,<span style="color:#e6db74">&#39;r&#39;</span>)
+s <span style="color:#f92672">=</span> orig<span style="color:#f92672">.</span>read()
+<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> o:
+    o<span style="color:#f92672">.</span>write(s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>translate(str<span style="color:#f92672">.</span>maketrans(<span style="color:#e6db74">&#39;ACGT&#39;</span>, <span style="color:#e6db74">&#39;TGCA&#39;</span>)))
+</code></pre></div><p>This double colon followed by the $-1$ in the indexing for s gives us the reverse of the string. s.translate() then transposes the complements onto the string using the table defined by str.maketrans().</p>
 
   </div>
   <footer>
@@ -254,10 +253,10 @@
         <ul>
           
             
-            <li><a class="article-category-link" href="https://drdjing.github.io/categories/machine-learning">Machine Learning</a></li>
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/rosalind">Rosalind</a></li>
           
             
-            <li><a class="article-category-link" href="https://drdjing.github.io/categories/ai">AI</a></li>
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/bioinformatics">Bioinformatics</a></li>
           
             
             <li><a class="article-category-link" href="https://drdjing.github.io/categories/python">Python</a></li>
@@ -289,7 +288,7 @@
       </h5>
 
       
-      <input type="hidden" name="options[entryId]" value="5ad6f496757a35aed6b1f1c720b0550e">
+      <input type="hidden" name="options[entryId]" value="f6ebb829fe54bfc9c8b236272714dec3">
       <input type='hidden' name='fields[replyThread]' value=''>
       <input type='hidden' name='fields[replyID]' value=''>
       <input type='hidden' name='fields[replyName]' value=''>
@@ -332,10 +331,8 @@
 
 <div class="pagination">
   
-    <a href="/blog/labjack3/" class="button"><div class="previous"><div>Labjack take 3</div></div></a>
+    <a href="/blog/fib/" class="button"><div class="previous"><div>Bioinformatics with Rosalind - FIB</div></div></a>
   
-  
-    <a href="/blog/beeorwasp/" class="button"><div class="next"><div>Is it a wasp or a bee?</div></div></a>
   
 </div>
 
