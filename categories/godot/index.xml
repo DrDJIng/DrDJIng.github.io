@@ -5,10 +5,20 @@
     <link>https://drdjing.github.io/categories/godot/</link>
     <description>Recent content in Godot on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/categories/godot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First simple game</title>
+      <link>https://drdjing.github.io/blog/gamedevtut/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/gamedevtut/</guid>
+      <description>Following the tutorial given in the Godot documentation was a simple and easy task. They provide all the assets, code snippets, etc, to get you up and running with a simple avoidance game.
+Now that this is finished, I&amp;rsquo;ll get to work on my actual project!</description>
+    </item>
     
     <item>
       <title>Starting in Game Development</title>

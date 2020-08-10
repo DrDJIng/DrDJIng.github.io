@@ -63,6 +63,16 @@ This post is about my bee net. Initially, the idea was to classify bees accordin
     </item>
     
     <item>
+      <title>First simple game</title>
+      <link>https://drdjing.github.io/blog/gamedevtut/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/gamedevtut/</guid>
+      <description>Following the tutorial given in the Godot documentation was a simple and easy task. They provide all the assets, code snippets, etc, to get you up and running with a simple avoidance game.
+Now that this is finished, I&amp;rsquo;ll get to work on my actual project!</description>
+    </item>
+    
+    <item>
       <title>Learning practical machine learning</title>
       <link>https://drdjing.github.io/blog/mllearning/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
