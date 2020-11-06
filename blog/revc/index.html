@@ -10,8 +10,8 @@
 <meta itemprop="description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement.">
 <meta itemprop="datePublished" content="2020-08-04T01:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-04T01:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="157">
-<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png">
+<meta itemprop="wordCount" content="163">
+<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/DNA.png">
 
 
 
@@ -19,11 +19,11 @@
 <meta property="og:description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://drdjing.github.io/blog/revc/" />
-<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" />
+<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/DNA.png" />
 <meta property="article:published_time" content="2020-08-04T01:00:00+00:00" />
 <meta property="article:modified_time" content="2020-08-04T01:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png"/>
+<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/DNA.png"/>
 
 <meta name="twitter:title" content="Bioinformatics with Rosalind - REVC"/>
 <meta name="twitter:description" content="This Rosalind problem deals with complementing DNA. So it should be as simple as telling the DNA is has really nice helical structure, right? Unfortunately not, though it is still simple. Each nucleotide can bond only to one other, in the manner A - T, and C - G, and these are the complements. So to find the complement of an entire DNA string, you just replace all the symbols with their counterpart, and funnily enough the reverse complement is the reverse of the complement."/>
@@ -227,7 +227,7 @@
   
   <a href="/blog/revc/" class="image featured">
     
-      <img src="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" alt="">
+      <img src="https://drdjing.github.io/images/2020/frontimg/DNA.png" alt="">
     
   </a>
 
@@ -242,6 +242,7 @@ s <span style="color:#f92672">=</span> orig<span style="color:#f92672">.</span>r
 <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;output.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> o:
     o<span style="color:#f92672">.</span>write(s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>translate(str<span style="color:#f92672">.</span>maketrans(<span style="color:#e6db74">&#39;ACGT&#39;</span>, <span style="color:#e6db74">&#39;TGCA&#39;</span>)))
 </code></pre></div><p>This double colon followed by the $-1$ in the indexing for s gives us the reverse of the string. s.translate() then transposes the complements onto the string using the table defined by str.maketrans().</p>
+<p>Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3539309">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3539309">Pixabay</a>.</p>
 
   </div>
   <footer>
@@ -350,7 +351,7 @@ s <span style="color:#f92672">=</span> orig<span style="color:#f92672">.</span>r
           
   <a href="/blog/revc/" class="image featured">
     
-      <img src="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" alt="">
+      <img src="https://drdjing.github.io/images/2020/frontimg/DNA.png" alt="">
     
   </a>
 
@@ -384,7 +385,7 @@ s <span style="color:#f92672">=</span> orig<span style="color:#f92672">.</span>r
           
   <a href="/blog/rna/" class="image featured">
     
-      <img src="https://drdjing.github.io/images/2020/frontimg/bioinformatics.png" alt="">
+      <img src="https://drdjing.github.io/images/2020/frontimg/DNA.png" alt="">
     
   </a>
 
