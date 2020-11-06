@@ -256,7 +256,7 @@ The basic idea is that every click is a job application. As more and more applic
 <p>The coding itself is relatively simple. Godot provides a number of typical built in functions to provide game functionality, and here we mostly want to exploit the _process(delta) function. This function runs every time step, which is based on your framerate. Delta is the length of time between each step. For example, at 60 FPS delta would be equal to 1/60 or approximately 16.7 ms.</p>
 <p>I&rsquo;ve decided to go a route where I set a rate of gain for each option, which can then be modified by external factors (such as achievements when I add them). Alexander King wrote <a href="https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023">an excellent post</a> on the math behind the ideal growth rate for cost and return. Following his advice, I&rsquo;ve chosen a growth rate of 1.09, such that the cost rate goes as</p>
 <p>$$C(N) = C_0 C_G ^ N$$</p>
-<p>where $C(N)$ is the cost function, $C_G$ is the cost growth, and $N$ is the number already purchased.</p>
+<p>where (C(N)) is the cost function, (C_G) is the cost growth, and (N) is the number already purchased.</p>
 
   </div>
   <footer>
