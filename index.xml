@@ -5,10 +5,20 @@
     <link>https://drdjing.github.io/</link>
     <description>Recent content on Ingots of learning</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 04 Aug 2020 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://drdjing.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Idle clicker game</title>
+      <link>https://drdjing.github.io/blog/gameidleclick1/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://drdjing.github.io/blog/gameidleclick1/</guid>
+      <description>For my first full game, I&amp;rsquo;ve decided to do an idle clicker. You know, like Cookie Clicker but with a different theme. Given 2020, and my unemployment, I&amp;rsquo;ve decided to make it a job-search themed clicker.
+The basic idea is that every click is a job application. As more and more applications are sent out, the rejections start rolling in. Motivation builds as your progress, which lets you buy &amp;ldquo;auto-clickers&amp;rdquo; which will automatically apply for jobs for you.</description>
+    </item>
     
     <item>
       <title>Bioinformatics with Rosalind - REVC</title>
