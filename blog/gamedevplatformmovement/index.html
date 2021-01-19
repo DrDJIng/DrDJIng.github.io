@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Simple platformer game - Ingots of learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.71.1" /><meta itemprop="name" content="Simple platformer game">
+<meta itemprop="description" content="So, among the many things I&rsquo;m attempting at the moment, one of them is to once again attempt to make a game. The game I intend on making eventually has many complicated components, so I decided to start with something simpler - a platformer.
+Platforming games are named so because - you guessed it! - there are platforms and obstacle to jump on / over. Famous examples include many of the classic Nintendo era games, and even Metroidvanias can contain elements of platforming.">
+<meta itemprop="datePublished" content="2021-01-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-01-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2293">
+<meta itemprop="image" content="https://drdjing.github.io/images/2020/frontimg/godotTut.png">
+
+
+
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Simple platformer game" />
+<meta property="og:description" content="So, among the many things I&rsquo;m attempting at the moment, one of them is to once again attempt to make a game. The game I intend on making eventually has many complicated components, so I decided to start with something simpler - a platformer.
+Platforming games are named so because - you guessed it! - there are platforms and obstacle to jump on / over. Famous examples include many of the classic Nintendo era games, and even Metroidvanias can contain elements of platforming." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://drdjing.github.io/blog/gamedevplatformmovement/" />
+<meta property="og:image" content="https://drdjing.github.io/images/2020/frontimg/godotTut.png" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://drdjing.github.io/images/2020/frontimg/godotTut.png"/>
+
+<meta name="twitter:title" content="Simple platformer game"/>
+<meta name="twitter:description" content="So, among the many things I&rsquo;m attempting at the moment, one of them is to once again attempt to make a game. The game I intend on making eventually has many complicated components, so I decided to start with something simpler - a platformer.
+Platforming games are named so because - you guessed it! - there are platforms and obstacle to jump on / over. Famous examples include many of the classic Nintendo era games, and even Metroidvanias can contain elements of platforming."/>
+<link rel="stylesheet" href="/css/bundle.min.890f30b8b199a3d390afae9cf9f69d7a932a6a7d91fc3a3b9e5b9d780c334432.css" integrity="sha256-iQ8wuLGZo9OQr66c&#43;fadepMqan2R/Do7nludeAwzRDI="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    <header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="lang-menu" class="flyout-menu">
+  <a href="#" lang="en" class="link active"> (en)</a>
+  
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f&amp;title=Simple%20platformer%20game" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://drdjing.github.io/images/main/logo.png" class="circle" width="" alt="The wannabe viking" /></a>
+  <header>
+    <h1>Ingots of learning</h1>
+  </header>
+  <main>
+    <p>The blog of a wayward computational physicist.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/drdjing" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/david-ing-091452b2" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//telegram.me/DrDavidIng" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+
+
+<li><a href="mailto:dr.david.ing@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+      <h2><a href="/blog/gamedevplatformmovement/">Simple platformer game</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time class="published" datetime="2021-01-07 00:00:00 &#43;0000 UTC">
+      January 7, 2021
+    </time>
+    <span class="author"></span>
+    
+      <p>11 minute read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f&amp;title=Simple%20platformer%20game" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/blog/gamedevplatformmovement/" class="image featured">
+    
+      <img src="https://drdjing.github.io/images/2020/frontimg/godotTut.png" alt="">
+    
+  </a>
+
+
+  <div class="content">
+    <p>So, among the many things I&rsquo;m attempting at the moment, one of them is to once again attempt to make a game. The game I intend on making eventually has many complicated components, so I decided to start with something simpler - a platformer.</p>
+<p>Platforming games are named so because - you guessed it! - there are platforms and obstacle to jump on / over. Famous examples include many of the classic Nintendo era games, and even Metroidvanias can contain elements of platforming.</p>
+<p>So I decided to set out and recreate the basic movements seen in one of my all-time favourite games - <a href="https://hollowknight.com/">Hollow Knight</a>. Hollow Knight is a Metroidvania game, with tight movement controls and a simple combat system, but don&rsquo;t mistake simple for easy! It can be brutally difficult, and completely unforgiving in areas, and is the better for it.</p>
+<p><img src="/images/2021/other/games/HK.gif" alt="Hollow Knight. Could I recreate such great movement?"></p>
+<p>I&rsquo;m using free art assets from itch.io, specifically <a href="https://maaot.itch.io/mossy-cavern">Mossy Cavern</a> by Maaot. It&rsquo;s a Hollow Knight inspired package, and it&rsquo;s perfect for my little prototyping project. It comes with a little hooded guy, who has basic walking, jumping, and dash movements. To fully recreate the movement of the protagonist, I&rsquo;ll have to put together a couple of animations myself, including attacking, and double jumping.</p>
+<p>So, first thing&rsquo;s first! Moving left to right. This is relatively easy to accomplish in Godot, using its built-in physics engine. What we want is to watch for an input by the user, then depending on that input, assign velocity in either the -x (left) or x (right) directions. So, we make a new scene, add a node2D, a kinematic body under that, then a sprite, a camera, and a collision shape. We then attach a script to the KinematicBody2D, by right-clicking and selecting &ldquo;Attach script&rdquo;.</p>
+<p><img src="/images/2021/other/games/nodestruct.png" alt="The node layout I&rsquo;m using in Godot for this post."></p>
+<p>Okay, so now we&rsquo;re in the godot scripting area. I&rsquo;ll be using GDScript instead of any C# alternative, because I like python, and high performance isn&rsquo;t necessary at the moment. We want to begin by exporting a variable called speed, which will be how fast our character can move. The reason we export it is so that we can edit it from the node inspector without having to modify the script. We also want to instantiate a vector to hold our velocity. Velocity is, of course, just speed with a direction, which is why we need a vector.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">KinematicBody2D</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">var</span> SPEED <span style="color:#f92672">=</span> <span style="color:#ae81ff">550.0</span> <span style="color:#75715e"># units / s</span>
+
+<span style="color:#66d9ef">var</span> velocity <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vector2</span>()
+</code></pre></div><p>So now we can control how fast our character moves. Wonderful! Now let&rsquo;s add in the actual ability to move it! What we want is a function that will be called every time the physics in the game updates. This function will look for input, and modify velocities every update. It does this by using an in-built function called is_action_pressed().</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">KinematicBody2D</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">var</span> SPEED <span style="color:#f92672">=</span> <span style="color:#ae81ff">550.0</span>
+
+<span style="color:#66d9ef">func</span> get_input():
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_pressed(<span style="color:#e6db74">&#34;move_left&#34;</span>):
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>flip_h <span style="color:#f92672">=</span> true <span style="color:#75715e"># Flip sprite animation so it faces left</span>
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Walk&#34;</span>) <span style="color:#75715e"># Play appropriate animation</span>
+    velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">-=</span> SPEED <span style="color:#75715e"># No acceleration</span>
+    <span style="color:#66d9ef">if</span> abs(velocity<span style="color:#f92672">.</span>x) <span style="color:#f92672">&gt;=</span> SPEED: <span style="color:#75715e"># Limit on speed</span>
+      velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>SPEED
+  <span style="color:#66d9ef">elif</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_released(<span style="color:#e6db74">&#34;move_left&#34;</span>):
+    velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Reset velocity to 0</span>
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Idle&#34;</span>) <span style="color:#75715e"># Play idle animation if not moving.</span>
+
+  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_pressed(<span style="color:#e6db74">&#34;move_right&#34;</span>):
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>flip_h <span style="color:#f92672">=</span> false <span style="color:#75715e"># Flip sprite so that animation faces right</span>
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Walk&#34;</span>) <span style="color:#75715e"># Play appropriate animation</span>
+    velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">+=</span> SPEED <span style="color:#75715e"># No acceleration</span>
+    <span style="color:#66d9ef">if</span> velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">&gt;=</span> SPEED: <span style="color:#75715e"># Limit on speed</span>
+      velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> SPEED
+  <span style="color:#66d9ef">elif</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_released(<span style="color:#e6db74">&#34;move_right&#34;</span>):
+    velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Reset velocity to 0</span>
+    <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Idle&#34;</span>) <span style="color:#75715e"># Play idle animation if not moving.</span>
+
+</code></pre></div><p>So there&rsquo;s several things going on here. The first is I check whether the inputs are &ldquo;move_left&rdquo;, or &ldquo;move_right&rdquo;, and whether they&rsquo;re being pressed, or have just been released. If pressed, we accelerate the character to SPEED in a single frame. If SPEED tries to go above the limit set by us, it gets capped. No infinite speed!</p>
+<p>It&rsquo;s at this point that we also flip the Sprite direction, so that our character is always facing the correct way. This is simply done with Sprite.flip_h command. Since my sprite faces right normally, I have to flip it when moving left. Here, I also set the sprite animation to my walking animation, so that the sprite doesn&rsquo;t just glide along. Setting up the animations is outside the scope of this post, but a basic tutorial can be found on the <a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html">Godot tutorials website</a>.</p>
+<p>One last thing we need to do, is under the physics update part of the engine, we should check out input, and set our velocity. We use move_and_slide() so the engine knows that it&rsquo;s okay for our collision box to move if it&rsquo;s touching other collision boxes. This is easily done by including:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">func</span> _physics_process(delta):
+  get_input()
+  velocity <span style="color:#f92672">=</span> move_and_slide(velocity)
+</code></pre></div><p><img src="/images/2021/other/games/onlyhor.gif" alt="We have movement! But there&rsquo;s a problem&hellip;"></p>
+<p>We have movement! However, there&rsquo;s a sliiight problem. You see, most of the time, when you walk over a ledge or a gap, you fall down. Usually. So we need to add in a bit of a downward force. We&rsquo;ll call it gravity, because that&rsquo;s what it emulates! Since collisions are all handled nicely within move_and_slide() with regards to velocity, all we need to do is add two lines of code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">var</span> GRAVITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.807</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span> <span style="color:#75715e"># units / s. Play with this to find something that feels good.</span>
+
+<span style="color:#66d9ef">func</span> _physics_process(delta):
+  [<span style="color:#f92672">...</span>]
+  velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">+=</span> GRAVITY
+  velocity <span style="color:#f92672">=</span> move_and_slide(velocity)
+</code></pre></div><p>And viola! We fall!</p>
+<p><img src="/images/2021/other/games/falling.gif" alt="Falling!"></p>
+<p>It&rsquo;s at this point I should probably implement <a href="https://developer.amazon.com/blogs/appstore/post/9d2094ed-53cb-4a3a-a5cf-c7f34bca6cd3/coding-imprecise-controls-to-make-them-feel-more-precise">Coyote timing</a>, but I&rsquo;m just going to fake it a bit by having a nasty rectangular hitbox on my character. This gives a bit of leeway in the jump timing, which is what coyote timing is for, so this is like lazy-mans coyote.</p>
+<p>Okay, time to add a jump! The basic idea is, if we&rsquo;re on the floor, we can hit the jump button to add a certain amount of y-velocity. We want to fall a little faster after a jump, to give a bit more control to the player. All of this, of course, should be tweaked endlessly until it feels amazing to play. I&rsquo;ve tweaked it a fair bit, but it still needs more tweaking. Anyway, the code for this goes something like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">func</span> _physics_process(delta):
+	[<span style="color:#f92672">...</span>]
+	<span style="color:#66d9ef">if</span> velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+			velocity <span style="color:#f92672">+=</span> <span style="color:#a6e22e">Vector2</span><span style="color:#f92672">.</span>UP <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> FSCALE <span style="color:#75715e"># This makes me accelerate FSCALE faster than gravity would typically dictate.</span>
+			<span style="color:#66d9ef">if</span> velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> FSCALE:
+				velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> FSCALE <span style="color:#75715e"># This caps downward velocity at 2 * FSCALE * GRAVITY</span>
+		<span style="color:#66d9ef">elif</span> velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_released(<span style="color:#e6db74">&#34;jump&#34;</span>):
+			velocity <span style="color:#f92672">+=</span> <span style="color:#a6e22e">Vector2</span><span style="color:#f92672">.</span>UP <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> LOW_JUMP_SCALE <span style="color:#75715e"># This is falling after a jump. You&#39;ll notice that falling after a jump is faster than falling normally. This is because we want the player to have more control over their movement.</span>
+			<span style="color:#66d9ef">if</span> velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> LOW_JUMP_SCALE:
+				velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span>GRAVITY) <span style="color:#f92672">*</span> LOW_JUMP_SCALE <span style="color:#75715e"># Still capped at 2 * FSCALE * GRAVITY, though.</span>
+
+		<span style="color:#66d9ef">if</span> is_on_floor():
+			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_pressed(<span style="color:#e6db74">&#34;jump&#34;</span>):
+				<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Jump&#34;</span>) <span style="color:#75715e"># Switch to jump sprite (with horizontal direction set by movement branches above)</span>
+				velocity <span style="color:#f92672">+=</span> <span style="color:#a6e22e">Vector2</span><span style="color:#f92672">.</span>UP <span style="color:#f92672">*</span> JUMP_SPEED <span style="color:#75715e"># How fast we jump</span>
+
+	<span style="color:#66d9ef">func</span> _on_Sprite_animation_finished():
+	<span style="color:#75715e"># This function is entirely to stop the sprite animation from looping.</span>
+	<span style="color:#66d9ef">if</span>  <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>animation <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Jump&#34;</span>:
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>stop()
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>frame <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span> <span style="color:#75715e"># This stops the weird jittering I see at the end of the animation for some reason.</span>
+
+</code></pre></div><p>We&rsquo;ve also attached a signal from the sprite, for the animation. Since I want the last frame of the animation to linger as long as the character is off of the ground. Gives the look of a cool sort of &ldquo;waiting to land&rdquo; look. With a more complete set of animations, I would actually try to implement a &ldquo;jumping&rdquo; animation, a &ldquo;cresting&rdquo; animation for the peak of the jump, and a seperate &ldquo;falling&rdquo; animation.</p>
+<p><img src="/images/2021/other/games/jumping.gif" alt="Jumping!"></p>
+<p>Adding a double-jump is as single as adding in a toggle that switches when we jump again (so that we can&rsquo;t jump infinitely), and a curious little tweak that involves setting the y-velocity momentarily to 0.001. This prevents weird velocity interactions, and also stops the idle animation from starting.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript">[<span style="color:#f92672">...</span>]
+<span style="color:#66d9ef">var</span> doubleJump <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Has Double Jump been exhausted?</span>
+
+<span style="color:#66d9ef">func</span> _physics_process(delta):
+	[<span style="color:#f92672">...</span>]
+	<span style="color:#66d9ef">if</span> is_on_floor():
+	doubleJump <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_pressed(<span style="color:#e6db74">&#34;jump&#34;</span>):
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Jump&#34;</span>) <span style="color:#75715e"># Switch to jump sprite (with horizontal direction set by movement branches above)</span>
+		velocity <span style="color:#f92672">+=</span> <span style="color:#a6e22e">Vector2</span><span style="color:#f92672">.</span>UP <span style="color:#f92672">*</span> JUMP_SPEED <span style="color:#75715e"># How fast we jump</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>is_on_floor() <span style="color:#f92672">and</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_pressed(<span style="color:#e6db74">&#34;jump&#34;</span>) <span style="color:#f92672">and</span> doubleJump <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+	doubleJump <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+	<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Jump&#34;</span>) <span style="color:#75715e"># Switch to jump sprite (with horizontal direction set by movement branches above)</span>
+	velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	velocity <span style="color:#f92672">+=</span> <span style="color:#a6e22e">Vector2</span><span style="color:#f92672">.</span>UP <span style="color:#f92672">*</span> JUMP_SPEED <span style="color:#75715e"># How fast we jump</span>
+</code></pre></div><p><img src="/images/2021/other/games/doublejump.gif" alt="Double Jumping!"></p>
+<p>So we just check to see if we&rsquo;ve not on the floor, then we can double jump. Technically this means if you&rsquo;re falling, you&rsquo;ll only get one jump, but I think that&rsquo;s fair considering that before you would just fall.</p>
+<p>I also want to add in a dash. This will be available only after a pickup, but for the moment I&rsquo;m just going to have it work. To use a dash, I have several timers. One for during the dash, and one that controls how often we can dash. I&rsquo;ve set the second timer for around 1.5s, meaning we can dash relatively often (though it feels like a lifetime in-game!). The first timer controls a number of things. Namely, controlling gravity for our character (don&rsquo;t want to fall during the dash!), the sprite used, and so on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript">
+<span style="color:#66d9ef">var</span> isDashing <span style="color:#f92672">=</span>  <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Is the chracter current dashing? Default is no.</span>
+<span style="color:#66d9ef">var</span> beforexVelocity <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Velocity before a dash</span>
+<span style="color:#66d9ef">var</span> candash <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Can the character currently dash?</span>
+<span style="color:#66d9ef">var</span> animationPicker <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># For randomising the dash animations (though I think they&#39;re all the same???)</span>
+
+<span style="color:#66d9ef">func</span> _physics_process(delta):
+	[<span style="color:#f92672">...</span>]
+	<span style="color:#66d9ef">if</span> isDashing <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+		[<span style="color:#f92672">...</span>]
+		<span style="color:#75715e"># Here we want to dash. When dash button is pressed, we check to see if we can dash, and whether we have the dash pickup.</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_pressed(<span style="color:#e6db74">&#34;dash&#34;</span>) <span style="color:#f92672">and</span> candash <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+		candash <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># No infinite dashing!</span>
+		velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span> <span style="color:#75715e"># A little bit of y-velocity to prevent idle animations from triggering.</span>
+		GRAVITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># No falling while we dash.</span>
+		isDashing <span style="color:#f92672">=</span>  <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Yes, we are dashing.</span>
+		animationPicker <span style="color:#f92672">=</span> randi() <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Decide wish dash animation to use (I think they&#39;re all the same???)</span>
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Dash&#34;</span> <span style="color:#f92672">+</span> str(animationPicker)) <span style="color:#75715e"># Play the chosen animation</span>
+		beforexVelocity <span style="color:#f92672">=</span> velocity<span style="color:#f92672">.</span>x <span style="color:#75715e"># Set before x velocity, so we can have nice smooth transitions.</span>
+		<span style="color:#f92672">$</span>DuringDashTimer<span style="color:#f92672">.</span>start() <span style="color:#75715e"># Start the during dash timer, which will set dash properties for the duration.</span>
+		<span style="color:#f92672">$</span>DashTimer<span style="color:#f92672">.</span>start() <span style="color:#75715e"># Start the dash timer, which will reset canDash when it expires.</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>flip_h <span style="color:#f92672">==</span> true: <span style="color:#75715e"># Set dash speed depending on which direction sprite is (so we can dash from idle)</span>
+			velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> SPEED
+		<span style="color:#66d9ef">else</span>:
+			velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">*</span> SPEED
+
+	[<span style="color:#f92672">...</span>]
+
+<span style="color:#66d9ef">func</span> _on_DuringDashTimer_timeout():
+	<span style="color:#75715e"># When the dash timer runs out, we reset our velocity, and our gravity, and set isDashing to 0.</span>
+	isDashing <span style="color:#f92672">=</span>  <span style="color:#ae81ff">0</span>
+	velocity<span style="color:#f92672">.</span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+	velocity<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span>
+	GRAVITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">9.807</span>
+	<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>play(<span style="color:#e6db74">&#34;Jump&#34;</span>)
+	<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>stop()
+	<span style="color:#f92672">$</span><span style="color:#a6e22e">Sprite</span><span style="color:#f92672">.</span>frame <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span> <span style="color:#75715e"># After dash, set frame to last frame of jump so if we&#39;re falling, it looks right.</span>
+
+
+<span style="color:#66d9ef">func</span> _on_DashTimer_timeout():
+	candash <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># We don&#39;t want people to be able to dash all the time, so we have this timer.</span>
+</code></pre></div><p>I also have three different(? maybe?) animations for dash, so I randomly choose one from the three. I also keep track of what the x-velocity was before the dash, so we can seamlessly keep momentum. One important distinction here is that the direction of the dash <em>isn&rsquo;t</em> based on a direction key press. Instead, it&rsquo;s based on the <em>sprite</em> direction. This allows us to dash from a stand-still! This particular implementation does mean that we can&rsquo;t dash as far when we&rsquo;re idle (since we&rsquo;re adding velocity instead of setting it), but I kind of like that idea.</p>
+<p><img src="/images/2021/other/games/dashing.gif" alt="How dashing!"></p>
+<p>The last thing I implemented was a look-down, so that we can look to see where we&rsquo;re falling. Though I didn&rsquo;t create anywhere in the level where you would need this, it was an interesting challenge. I started with another of the most ubiquitous of those useful items - a timer! You see, I want to look down when I press the look-down button, in this case &ldquo;s&rdquo;. However, I also want to use this button to pick up items, so I need two different timescales - a quick press for pickup, and a long press for looking.</p>
+<p>To accomplish this, I have a timer set for 1.5s, which is active only as long as the player is pressing the button down. So we start the timer with Input.is_action_just_pressed(&ldquo;move_down&rdquo;), and stop the timer with Input.is_action_just_released(&ldquo;move_down&rdquo;). If the timer ever goes off, it toggles the moveCamDown variable, which will then interpolate the camera&rsquo;s position between it&rsquo;s current position, and an offset position.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-GDScript" data-lang="GDScript"><span style="color:#66d9ef">var</span> moveCamDown <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># For looking down.</span>
+
+<span style="color:#66d9ef">func</span> get_input(dt):
+	[<span style="color:#f92672">...</span>]
+	<span style="color:#66d9ef">if</span> isDashing <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>: <span style="color:#75715e"># If we&#39;re not currently dashing</span>
+		[<span style="color:#f92672">...</span>]
+
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_pressed(<span style="color:#e6db74">&#34;move_down&#34;</span>): <span style="color:#75715e"># We want to look down!</span>
+			<span style="color:#f92672">$</span>LookTimer<span style="color:#f92672">.</span>start() <span style="color:#75715e"># It takes a while to look down, since we don&#39;t want to look down every single time we tap down.</span>
+		<span style="color:#66d9ef">elif</span> <span style="color:#a6e22e">Input</span><span style="color:#f92672">.</span>is_action_just_released(<span style="color:#e6db74">&#34;move_down&#34;</span>): <span style="color:#75715e"># Stop the timer if we let go of down.</span>
+			<span style="color:#f92672">$</span>LookTimer<span style="color:#f92672">.</span>stop()
+			moveCamDown <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e"># Will trigger function to bring camera back up.</span>
+
+<span style="color:#66d9ef">func</span> _on_LookTimer_timeout():
+	moveCamDown <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Start moving the camera down.</span>
+</code></pre></div><p><img src="/images/2021/other/games/looking.gif" alt="Looking good there buddy!"></p>
+<p>This gives nice, smooth camera movement.</p>
+<p>There are a few more things that would make this prototype perfect. Automatically adjusting viewport sizes, wall climbing, crystal dash to name a few. However, perfect is the enemy of good, and I feel enthusiastic to move on to my next project. Since this was only ever meant to be a brief introduction to player movement systems, I&rsquo;m happy to ride my way of motivation on to the next, more advanced project.</p>
+<p>Hopefully, an ARPG!</p>
+<p>Code can be found on my <a href="https://github.com/DrDJIng/SimplePlatformer">github</a>.</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/gaming">Gaming</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/game-dev">Game Dev</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/godot">Godot</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://drdjing.github.io/categories/python">Python</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    <li class="tags">
+      <ul>
+        <li>None</li>
+      </ul>
+    </li>
+  
+</ul>
+
+  </footer>
+</article>
+
+    <article class="post">
+      
+<div>
+  <h2>Say something</h2>
+    <form id="post-js-form" class="post-new-comment" method="POST">
+      
+      <h5 class='post-reply-notice hidden'>
+        <span class='post-reply-arrow'></span><span class='post-reply-name'></span>
+      </h5>
+
+      
+      <input type="hidden" name="options[entryId]" value="7f048a5613b974aacf8756a97ca430b3">
+      <input type='hidden' name='fields[replyThread]' value=''>
+      <input type='hidden' name='fields[replyID]' value=''>
+      <input type='hidden' name='fields[replyName]' value=''>
+
+      
+      <input required name='fields[name]' type='text' placeholder='Your name (Required)'>
+      <input name='fields[website]' type='text' placeholder='Your website'>
+      <input required name='fields[email]' type='email' placeholder='Your email address (Required for Gravatar)'>
+      <textarea required name='fields[body]' placeholder='Your message. Feel free to use Markdown (Google &#39;Markdown Cheat Sheet&#39;).' rows='10'></textarea>
+
+      
+      
+
+      
+      <p class='post-submit-notice'>
+        <strong class='post-submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+        <strong class='post-submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission.  Please make sure all required fields have been completed and try again.</strong>
+      </p>
+
+      
+      <input type='submit' value='Submit' class='button'>
+      <input type='submit' value='Submitted' class='hidden button' disabled>
+      <input type='reset' value='Reset' class='button'>
+    </form>
+</div>
+
+
+<div>
+  <h2>Comments</h2>
+
+  
+    
+      <p>Nothing yet.</p>
+    
+  
+</div>
+
+    </article>
+
+
+<div class="pagination">
+  
+    <a href="/blog/gameidleclick1/" class="button"><div class="previous"><div>Idle clicker game</div></div></a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/gamedevplatformmovement/" class="image featured">
+    
+      <img src="https://drdjing.github.io/images/2020/frontimg/godotTut.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/gamedevplatformmovement/">Simple platformer game</a></h1>
+          <time class="published" datetime="">January 7, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/gameidleclick1/" class="image featured">
+    
+      <img src="https://drdjing.github.io/images/2020/frontimg/jss.gif" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/gameidleclick1/">Idle clicker game</a></h1>
+          <time class="published" datetime="">November 6, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/blog/gamedevtut/" class="image featured">
+    
+      <img src="https://drdjing.github.io/images/2020/frontimg/godotTut.png" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/blog/gamedevtut/">Following the simple Godot tutorial</a></h1>
+          <time class="published" datetime="">August 12, 2020</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See more</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/python/">python<span class="count">11</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/bioinformatics/">bioinformatics<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/game-dev/">game-dev<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/gaming/">gaming<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/godot/">godot<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/rosalind/">rosalind<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/instrumentation/">instrumentation<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/labjack/">labjack<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/ai/">ai<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/julia/">julia<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/machine-learning/">machine-learning<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/computation/">computation<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/golang/">golang<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/html/">html<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/matlab/">matlab<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/meteorology/">meteorology<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/physics/">physics<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>David is a computational physicist / programmer / general nerd / wannabe viking. Oh, and he really likes blacksmithing.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/drdjing" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/david-ing-091452b2" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//telegram.me/DrDavidIng" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+
+
+<li><a href="mailto:dr.david.ing@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2021
+      
+        Ingots of learning
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.71.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <script src="/js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.f84cd5344e26e575e8838421320514de8294b19217bf60d977a51cf4dd1bc722.js" integrity="sha256-&#43;EzVNE4m5XXog4QhMgUU3oKUsZIXv2DZd6Uc9N0bxyI="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
