@@ -11,7 +11,7 @@
 Platforming games are named so because - you guessed it! - there are platforms and obstacle to jump on / over. Famous examples include many of the classic Nintendo era games, and even Metroidvanias can contain elements of platforming.">
 <meta itemprop="datePublished" content="2021-01-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-01-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2293">
+<meta itemprop="wordCount" content="2377">
 <meta itemprop="image" content="https://drdjing.github.io/images/2021/frontimg/simpleplatformer.png">
 
 
@@ -116,7 +116,7 @@ Platforming games are named so because - you guessed it! - there are platforms a
   
 
   
-        <a href='mailto:?subject= Simple%20platformer%20game &amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f' target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject= Simple%20platformer%20game &amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -202,7 +202,7 @@ Platforming games are named so because - you guessed it! - there are platforms a
     </time>
     <span class="author"></span>
     
-      <p>11 minute read</p>
+      <p>12 minute read</p>
     
   </div>
 </header>
@@ -220,7 +220,7 @@ Platforming games are named so because - you guessed it! - there are platforms a
   
 
   
-        <a href='mailto:?subject= Simple%20platformer%20game &amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f' target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject= Simple%20platformer%20game &amp;body=https%3a%2f%2fdrdjing.github.io%2fblog%2fgamedevplatformmovement%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -395,10 +395,17 @@ Platforming games are named so because - you guessed it! - there are platforms a
 			<span style="color:#f92672">$</span>LookTimer<span style="color:#f92672">.</span>stop()
 			moveCamDown <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e"># Will trigger function to bring camera back up.</span>
 
+<span style="color:#66d9ef">func</span> _process(delta):
+	<span style="color:#75715e"># Really should change this to a function.</span>
+	<span style="color:#66d9ef">if</span> moveCamDown <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> <span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y <span style="color:#f92672">!=</span> <span style="color:#ae81ff">300</span>:
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> lerp(<span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">0.02</span>) <span style="color:#75715e"># Interpolate between current value and wanted value, then change the position. Makes a nice, smooth transition.</span>
+	<span style="color:#66d9ef">elif</span> moveCamDown <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> <span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+		<span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y <span style="color:#f92672">=</span> lerp(<span style="color:#f92672">$</span><span style="color:#a6e22e">Camera2D</span><span style="color:#f92672">.</span>position<span style="color:#f92672">.</span>y, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.02</span>)
+
 <span style="color:#66d9ef">func</span> _on_LookTimer_timeout():
 	moveCamDown <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Start moving the camera down.</span>
 </code></pre></div><p><img src="/images/2021/other/games/looking.gif" alt="Looking good there buddy!"></p>
-<p>This gives nice, smooth camera movement.</p>
+<p>This utilises the _process() function, which updates every frame. So when it&rsquo;s time to move the camera, it initialises the interpolation routine, and moves the camera position the required, interpolated amount. This gives nice, smooth camera movement.</p>
 <p>There are a few more things that would make this prototype perfect. Automatically adjusting viewport sizes, wall climbing, crystal dash to name a few. However, perfect is the enemy of good, and I feel enthusiastic to move on to my next project. Since this was only ever meant to be a brief introduction to player movement systems, I&rsquo;m happy to ride my way of motivation on to the next, more advanced project.</p>
 <p>Hopefully, an ARPG!</p>
 <p>Code can be found on my <a href="https://github.com/DrDJIng/SimplePlatformer">github</a>.</p>
